@@ -8,7 +8,7 @@ const initialStage = {
 
 const authSlice = createSlice({
     name: 'auth',
-    initialState,
+    initialState:null,
     reducers:{},
 });
 
