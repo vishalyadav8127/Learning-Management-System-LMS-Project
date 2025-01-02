@@ -47,3 +47,4 @@ npm instal @reduxjs/toolkit react-redux react-router-dom react-icons react-chart
 //
 
 "react/prop-Types":"off",
+Added about us page and fixed slidebar login signup button
