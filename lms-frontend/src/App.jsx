@@ -2,11 +2,10 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage.jsx';
 import AboutUs from './Pages/AboutUs.jsx';
+import CourseList from './Pages/Course/CourseList.jsx';
+import Login from './Pages/Login.jsx';
 import NotFound from './Pages/NotFound.jsx';
 import Signup from './Pages/Signup.jsx';
-import Login from './Pages/Login.jsx';
-
-
 function App() {
   
   return (
@@ -15,6 +14,8 @@ function App() {
         <Route path="/" element={<HomePage/>}></Route>
 
         <Route path="/about" element={<AboutUs/>}></Route>
+
+        <Route path="/courses" element={<CourseList/>}></Route>
 
         <Route path="/signup" element={<Signup/>}></Route>
 
