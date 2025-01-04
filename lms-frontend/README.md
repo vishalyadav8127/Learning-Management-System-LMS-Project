@@ -47,4 +47,3 @@ npm instal @reduxjs/toolkit react-redux react-router-dom react-icons react-chart
 //
 
 "react/prop-Types":"off",
-Added 404 Not Found Page
