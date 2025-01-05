@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import HomeLayout from "../Layouts/HomeLayout";
 import { createAccount } from "../Redux/Slices/AuthSlice";
+import { isEmail, isValidPassword } from "../Helpers/regexMatcher";
 
 
 
@@ -48,7 +49,7 @@ function Signup() {
         }
     }
 
-     async function createNewAccount(event) {
+        async function createNewAccount(event) {
         event.preventDefault();
         if(!signupData.email || !signupData.password || !signupData.fullName || !signupData.avatar) {
             toast.error("Please fill all the details");
@@ -63,14 +64,14 @@ function Signup() {
 
         // checking valid email
         //using email regex validation
-        if(!signupData.email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+        if(!isEmail(signupData.email)) {
             toast.error("Invalid email id");
             return;
         }
 
         // checking password validation
         //using password regex validation
-        if(!signupData.password.match(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/)) {
+        if(isValidPassword(!signupData.password)) {
             toast.error("Invalid email id");
             return;
         }
