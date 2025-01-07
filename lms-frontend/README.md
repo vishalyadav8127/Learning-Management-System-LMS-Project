@@ -50,4 +50,3 @@ npm instal @reduxjs/toolkit react-redux react-router-dom react-icons react-chart
 
 in index.html 
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-Added complete checkout success logic
