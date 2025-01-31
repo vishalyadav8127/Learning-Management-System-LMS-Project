@@ -1,9 +1,17 @@
 import { ArcElement, BarElement, CategoryScale, Chart as ChartJS, Legend, LinearScale, Title,Tooltip } from "chart.js";
 import { useEffect } from "react";
-import HomeLayout from "../../Layouts/HomeLayout";
+import { Bar, Pie } from "react-chartjs-2";
+import { BsCollectionPlayFill, BsTrash } from "react-icons/bs";
+import {FaUsers} from "react-icons/fa";
+import { FcSalesPerformance } from "react-icons/fc";
+import { GiMoneyStack } from "react-icons/gi";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
+import HomeLayout from "../../Layouts/HomeLayout";
 import { deleteCourse, getAllCourses } from "../../Redux/Slices/CourseSlice";
+import { getPaymentRecord } from "../../Redux/Slices/RazorpaySlice";
+import { getStatsData } from "../../Redux/Slices/StateSlice";
 ChartJS.register(ArcElement, BarElement, CategoryScale, Legend, LinearScale, Title, Tooltip);
 
 
